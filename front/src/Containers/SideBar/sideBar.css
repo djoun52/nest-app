@@ -1,0 +1,8 @@
+.sidebar {
+    /* min-width: 20%; */
+    /* max-width: 40%; */
+    width: 20%;
+    height:100vh;
+    background-color: #b6b6c7;
+    border: #232325;
+}

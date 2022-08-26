@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+    id          Int @id @default(autoincrement())
+    pseudo      String
+    email       String @unique
+    password    String
+    createdAt   DateTime @default(now())
+    udpdatedAt  DateTime @updatedAt
+    is_verifed  Boolean @default(false)
+    hashedRt    String?
+    bookmarks   Bookmark[]
+    @@map("users")
+}
+
+model Bookmark {
+    id              Int @id @default(autoincrement())
+    title           String
+    description     String
+    link            String
+    image           String
+    createdAt       DateTime @default(now())
+    udpdatedAt      DateTime @updatedAt
+    userId          Int
+    collectionId    Int
+    user            User @relation(fields: [userId], references: [id])
+    collection      Collection @relation(fields: [collectionId], references: [id])
+    tags            TagsOnBookmarks[]
+    @@map("bookmarks")
+}
+
+model Collection {
+    id          Int @id @default(autoincrement())
+    name        String
+    bookmarks   Bookmark[]
+    @@map("collections")
+}
+
+model Tag {
+    id          Int @id @default(autoincrement())
+    name        String
+    bookmarks   TagsOnBookmarks[]
+    @@map("tags")
+}
+
+model TagsOnBookmarks {
+  bookmark      Bookmark @relation(fields: [bookmarkId], references: [id])
+  bookmarkId    Int // relation scalar field (used in the `@relation` attribute above)
+  tag           Tag @relation(fields: [tagId], references: [id])
+  tagId         Int // relation scalar field (used in the `@relation` attribute above)
+  @@id([bookmarkId, tagId])
+}
+
+enum Role {
+  USER
+  ADMIN
+}
