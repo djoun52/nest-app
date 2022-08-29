@@ -6,6 +6,7 @@ import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 import { JwtPayload, Tokens } from './types';
+import { MailerService } from '@nestjs-modules/mailer';
 
 @Injectable()
 export class AuthService {
@@ -13,6 +14,7 @@ export class AuthService {
     private prisma: PrismaService,
     private jwt: JwtService,
     private config: ConfigService,
+    private readonly mailerService: MailerService,
   ) {}
 
   async signup(dto: AuthDto) {
@@ -53,6 +55,14 @@ export class AuthService {
     }
     const tokens = await this.signToken(user.id, user.email);
     await this.updateRtHash(user.id, tokens.refresh_token);
+    await this.mailerService.sendMail({
+      to: user.email, // list of receivers
+      from: 'noreply@nestjs.com', // sender address
+      subject: 'Testing Nest MailerModule ✔', // Subject line
+      text: 'welcome to my site', // plaintext body
+      html: '<b>welcome</b>', // HTML body content
+    });
+
     return tokens;
   }
 

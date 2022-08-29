@@ -9,10 +9,14 @@ import {
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthDto, LoginDto } from './dto';
-import { Public, GetCurrentUserId, GetCurrentUser, GetCurrentUserLg } from './decorator';
+import {
+  Public,
+  GetCurrentUserId,
+  GetCurrentUser,
+  GetCurrentUserLg,
+} from './decorator';
 import { Tokens } from './types';
 import { RtGuard } from './guards';
-
 
 @Controller('auth')
 export class AuthController {
