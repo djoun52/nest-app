@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10692309-bec8-456f-8973-35f402c9ecff" name="Changes" comment="">
+    <list default="true" id="10692309-bec8-456f-8973-35f402c9ecff" name="Changes" comment="verif">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +39,38 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\codeJS\\nest-app\\back\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\codeJS\\nest-app\\front\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="npm.start:dev">
+    <configuration name="db:dev:restart" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/back/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:dev:restart" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/back/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start:dev" />
+        <item itemvalue="npm.db:dev:restart" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,8 +84,20 @@
       <workItem from="1663145483833" duration="569000" />
       <workItem from="1663660664935" duration="1426000" />
       <workItem from="1664282145274" duration="414000" />
-      <workItem from="1664282998228" duration="928000" />
+      <workItem from="1664282998228" duration="2496000" />
+      <workItem from="1665474558679" duration="8127000" />
+      <workItem from="1665994972913" duration="878000" />
+      <workItem from="1665997772047" duration="2866000" />
+      <workItem from="1666110918045" duration="899000" />
     </task>
+    <task id="LOCAL-00001" summary="verif">
+      <created>1664286023191</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664286023191</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,5 +113,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="verif" />
+    <option name="LAST_COMMIT_MESSAGE" value="verif" />
   </component>
 </project>

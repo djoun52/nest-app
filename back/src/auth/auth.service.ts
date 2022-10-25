@@ -29,6 +29,13 @@ export class AuthService {
       });
       const tokens = await this.signToken(user.id, user.email);
       await this.updateRtHash(user.id, tokens.refresh_token);
+      await this.mailerService.sendMail({
+        to: user.email, // list of receivers
+        from: 'noreply@nestjs.com', // sender address
+        subject: 'Testing Nest MailerModule', // Subject line
+        text: 'welcome to my site', // plaintext body
+        html: '<b>welcome</b>', // HTML body content
+      });
       return tokens;
     } catch (error) {
       if (error instanceof PrismaClientKnownRequestError) {
@@ -55,13 +62,7 @@ export class AuthService {
     }
     const tokens = await this.signToken(user.id, user.email);
     await this.updateRtHash(user.id, tokens.refresh_token);
-    await this.mailerService.sendMail({
-      to: user.email, // list of receivers
-      from: 'noreply@nestjs.com', // sender address
-      subject: 'Testing Nest MailerModule ✔', // Subject line
-      text: 'welcome to my site', // plaintext body
-      html: '<b>welcome</b>', // HTML body content
-    });
+
 
     return tokens;
   }
@@ -130,5 +131,29 @@ export class AuthService {
       access_token: at,
       refresh_token: rt,
     };
+  }
+
+  async testMail(dto: LoginDto) {
+    const user = await this.prisma.user.findUnique({
+      where: {
+        email: dto.email,
+      },
+    });
+    if (!user) {
+      throw new ForbiddenException("User doesn't exist");
+    }
+    const isMatched = bcrypt.compareSync(dto.password, user.password);
+    if (!isMatched) {
+      throw new ForbiddenException('wrong password');
+    }
+    await this.mailerService.sendMail({
+      to: user.email, // list of receivers
+      from: 'noreply@nestjs.com', // sender address
+      subject: 'Testing Nest MailerModule ✔', // Subject line
+      text: 'TEST plaintext', // plaintext body
+      html: '<b>TEST html body</b>', // HTML body content
+    });
+
+    return user;
   }
 }
