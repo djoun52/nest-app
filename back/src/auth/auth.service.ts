@@ -6,7 +6,7 @@ import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 import { JwtPayload, Tokens } from './types';
-import { MailerService } from '@nestjs-modules/mailer';
+import { MailService } from '../mail/mail.service';
 
 @Injectable()
 export class AuthService {
@@ -14,11 +14,18 @@ export class AuthService {
     private prisma: PrismaService,
     private jwt: JwtService,
     private config: ConfigService,
-    private readonly mailerService: MailerService,
+    private mailService: MailService,
   ) {}
 
   async signup(dto: AuthDto) {
+    if (dto.password.length < 8 || dto.password.length > 35) {
+      throw new ForbiddenException(
+        'le mots de passe doit contenire entre 8 et 20 caractere ',
+      );
+    }
+
     const password: string = bcrypt.hashSync(dto.password, 10);
+    const token = Math.floor(1000 + Math.random() * 9000).toString();
     try {
       const user = await this.prisma.user.create({
         data: {
@@ -29,13 +36,7 @@ export class AuthService {
       });
       const tokens = await this.signToken(user.id, user.email);
       await this.updateRtHash(user.id, tokens.refresh_token);
-      await this.mailerService.sendMail({
-        to: user.email, // list of receivers
-        from: 'noreply@nestjs.com', // sender address
-        subject: 'Testing Nest MailerModule', // Subject line
-        text: 'welcome to my site', // plaintext body
-        html: '<b>welcome</b>', // HTML body content
-      });
+      await this.mailService.sendUserConfirmation(dto, token);
       return tokens;
     } catch (error) {
       if (error instanceof PrismaClientKnownRequestError) {
@@ -63,7 +64,6 @@ export class AuthService {
     const tokens = await this.signToken(user.id, user.email);
     await this.updateRtHash(user.id, tokens.refresh_token);
 
-
     return tokens;
   }
 
@@ -84,7 +84,6 @@ export class AuthService {
   }
 
   async refreshTokens(userId: number, rt: string): Promise<Tokens> {
-    //console.log(userId);
     const user = await this.prisma.user.findUnique({
       where: {
         id: userId,
@@ -131,29 +130,5 @@ export class AuthService {
       access_token: at,
       refresh_token: rt,
     };
-  }
-
-  async testMail(dto: LoginDto) {
-    const user = await this.prisma.user.findUnique({
-      where: {
-        email: dto.email,
-      },
-    });
-    if (!user) {
-      throw new ForbiddenException("User doesn't exist");
-    }
-    const isMatched = bcrypt.compareSync(dto.password, user.password);
-    if (!isMatched) {
-      throw new ForbiddenException('wrong password');
-    }
-    await this.mailerService.sendMail({
-      to: user.email, // list of receivers
-      from: 'noreply@nestjs.com', // sender address
-      subject: 'Testing Nest MailerModule ✔', // Subject line
-      text: 'TEST plaintext', // plaintext body
-      html: '<b>TEST html body</b>', // HTML body content
-    });
-
-    return user;
   }
 }

@@ -39,13 +39,6 @@ export class AuthController {
     return this.authService.signin(dto);
   }
 
-  @Public()
-  @HttpCode(HttpStatus.OK)
-  @Post('mail')
-  testMail(@Body() dto: LoginDto) {
-    return this.authService.testMail(dto);
-  }
-
   @Post('logout')
   @HttpCode(HttpStatus.OK)
   logout(@GetCurrentUserLg() userId: number): Promise<boolean> {

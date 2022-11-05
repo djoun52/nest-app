@@ -23,6 +23,14 @@ model User {
     @@map("users")
 }
 
+model emailVerificationToken {
+    id          Int @id @default(autoincrement())
+    owner       Int
+    token       String @unique
+    createdAt   DateTime @default(now())
+}
+
+
 model Bookmark {
     id              Int @id @default(autoincrement())
     title           String

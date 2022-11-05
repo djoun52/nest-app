@@ -5,12 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10692309-bec8-456f-8973-35f402c9ecff" name="Changes" comment="verif">
+      <change afterPath="$PROJECT_DIR$/back/src/mail/mail.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/mail/mail.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/mail/mail.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/mail/templates/confirmation.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_09_2022_10_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_09_2022_10_38__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/nest-cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/nest-cli.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/back/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/dto/auth.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/dto/auth.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/bookmark/bookmark.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/bookmark/bookmark.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/bookmark/dto/update-bookmark.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/bookmark/dto/update-bookmark.dto.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,32 +35,70 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2E6r2oKsGVA3evOeNy9UBHTKDlu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\codeJS\\nest-app\\front\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\code js\\nest-app\\back\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="npm.start:dev">
+}</component>
+  <component name="RunManager" selected="npm.db:dev:restart">
     <configuration name="db:dev:restart" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/back/package.json" />
       <command value="run" />
       <scripts>
         <script value="db:dev:restart" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="db:dev:rm" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/back/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:dev:rm" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="db:dev:up" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/back/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="db:dev:up" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prisma:dev:deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/back/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prisma:dev:deploy" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -66,8 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.db:dev:restart" />
+        <item itemvalue="npm.start:dev" />
+        <item itemvalue="npm.prisma:dev:deploy" />
+        <item itemvalue="npm.db:dev:up" />
+        <item itemvalue="npm.db:dev:rm" />
       </list>
     </recent_temporary>
   </component>
@@ -89,6 +142,11 @@
       <workItem from="1665994972913" duration="878000" />
       <workItem from="1665997772047" duration="2866000" />
       <workItem from="1666110918045" duration="899000" />
+      <workItem from="1666679399003" duration="5324000" />
+      <workItem from="1666699727322" duration="3719000" />
+      <workItem from="1666813281080" duration="209000" />
+      <workItem from="1667391523563" duration="1875000" />
+      <workItem from="1667437399312" duration="248000" />
     </task>
     <task id="LOCAL-00001" summary="verif">
       <created>1664286023191</created>
@@ -115,6 +173,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="verif" />
     <option name="LAST_COMMIT_MESSAGE" value="verif" />
   </component>
