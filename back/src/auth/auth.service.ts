@@ -20,12 +20,12 @@ export class AuthService {
   async signup(dto: AuthDto) {
     if (dto.password.length < 8 || dto.password.length > 35) {
       throw new ForbiddenException(
-        'le mots de passe doit contenire entre 8 et 20 caractere ',
+        'le mots de passe doit contenire entre 8 et 20 caractère ',
       );
     }
 
     const password: string = bcrypt.hashSync(dto.password, 10);
-    const token = Math.floor(1000 + Math.random() * 9000).toString();
+    const mailToken = Math.floor(100000 + Math.random() * 900000);
     try {
       const user = await this.prisma.user.create({
         data: {
@@ -36,7 +36,7 @@ export class AuthService {
       });
       const tokens = await this.signToken(user.id, user.email);
       await this.updateRtHash(user.id, tokens.refresh_token);
-      await this.mailService.sendUserConfirmation(dto, token);
+      await this.mailService.sendUserConfirmation(user, mailToken);
       return tokens;
     } catch (error) {
       if (error instanceof PrismaClientKnownRequestError) {

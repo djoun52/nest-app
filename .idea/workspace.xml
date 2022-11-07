@@ -4,25 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10692309-bec8-456f-8973-35f402c9ecff" name="Changes" comment="verif">
-      <change afterPath="$PROJECT_DIR$/back/src/mail/mail.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/mail/mail.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/mail/mail.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/mail/templates/confirmation.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_09_2022_10_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_09_2022_10_38__Changes_.xml" afterDir="false" />
+    <list default="true" id="10692309-bec8-456f-8973-35f402c9ecff" name="Changes" comment="mailer done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/nest-cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/nest-cli.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/back/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/dto/auth.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/dto/auth.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/bookmark/bookmark.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/bookmark/bookmark.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/bookmark/dto/update-bookmark.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/bookmark/dto/update-bookmark.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/bookmark/bookmark.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/bookmark/bookmark.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/bookmark/bookmark.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/bookmark/dto/create-bookmark.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/bookmark/dto/update-bookmark.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/bookmark/entities/bookmark.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/mail/mail.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/mail/mail.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/mail/templates/confirmation.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/mail/templates/confirmation.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/prisma/prisma.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/prisma/prisma.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,23 +41,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\code js\\nest-app\\back\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "C:\\code js\\nest-app\\back\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="npm.db:dev:restart">
     <configuration name="db:dev:restart" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/back/package.json" />
@@ -147,6 +142,11 @@
       <workItem from="1666813281080" duration="209000" />
       <workItem from="1667391523563" duration="1875000" />
       <workItem from="1667437399312" duration="248000" />
+      <workItem from="1667645670686" duration="680000" />
+      <workItem from="1667727623963" duration="4564000" />
+      <workItem from="1667771544161" duration="613000" />
+      <workItem from="1667807336427" duration="7393000" />
+      <workItem from="1667847092147" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="verif">
       <created>1664286023191</created>
@@ -155,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664286023191</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="mailer done">
+      <created>1667645749852</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667645749852</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +182,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="verif" />
-    <option name="LAST_COMMIT_MESSAGE" value="verif" />
+    <MESSAGE value="mailer done" />
+    <option name="LAST_COMMIT_MESSAGE" value="mailer done" />
   </component>
 </project>
