@@ -8,7 +8,7 @@ import {
   Get,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { AuthDto, LoginDto } from './dto';
+import { AuthDto, LoginDto, TokenDto } from './dto';
 import {
   Public,
   GetCurrentUserId,
@@ -23,10 +23,10 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Public()
-  @Post('signup')
-  signup(@Body() dto: AuthDto) {
+  @Post('signUp')
+  signUp(@Body() dto: AuthDto) {
     if (dto.password === dto.checkPass) {
-      return this.authService.signup(dto);
+      return this.authService.signUp(dto);
     } else {
       return 'password and checkPass not equal';
     }
@@ -34,9 +34,9 @@ export class AuthController {
 
   @Public()
   @HttpCode(HttpStatus.OK)
-  @Post('signin')
-  signin(@Body() dto: LoginDto) {
-    return this.authService.signin(dto);
+  @Post('signIn')
+  signIn(@Body() dto: LoginDto) {
+    return this.authService.signIn(dto);
   }
 
   @Post('logout')
@@ -55,5 +55,12 @@ export class AuthController {
     @GetCurrentUser('refreshToken') refreshToken: string,
   ): Promise<Tokens> {
     return this.authService.refreshTokens(userId, refreshToken);
+  }
+
+  @Public()
+  @HttpCode(HttpStatus.OK)
+  @Post('verifTokenAccount')
+  verifTokenAccount(@Body() dto: TokenDto) {
+    return this.authService.verifTokenAccount(dto);
   }
 }

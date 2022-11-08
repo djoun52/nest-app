@@ -4,20 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10692309-bec8-456f-8973-35f402c9ecff" name="Changes" comment="mailer done">
+    <list default="true" id="10692309-bec8-456f-8973-35f402c9ecff" name="Changes" comment="token validation account service and error check done">
+      <change afterPath="$PROJECT_DIR$/back/prisma/migrations/20221108001817_init/migration.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/auth/dto/token.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/prisma/migrations/20220811073733_ok/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/prisma/migrations/20220812090604_add_image_for_bookmark/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/prisma/migrations/migration_lock.toml" beforeDir="false" afterPath="$PROJECT_DIR$/back/prisma/migrations/migration_lock.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/back/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/bookmark/bookmark.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/bookmark/bookmark.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/bookmark/bookmark.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/bookmark/dto/create-bookmark.dto.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/bookmark/dto/update-bookmark.dto.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/bookmark/entities/bookmark.entity.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/mail/mail.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/mail/mail.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/mail/templates/confirmation.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/mail/templates/confirmation.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/prisma/prisma.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/prisma/prisma.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/decorator/get-current-user-id.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/decorator/get-current-user-id.decorator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/decorator/get-current-user-lg.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/decorator/get-current-user-lg.decorator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/decorator/get-current-user.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/decorator/get-current-user.decorator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/dto/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/dto/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/guards/at.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/guards/at.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/guards/rt.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/guards/rt.guard.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +35,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2E6r2oKsGVA3evOeNy9UBHTKDlu" />
   <component name="ProjectLevelVcsManager">
@@ -41,24 +45,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "C:\\code js\\nest-app\\back\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/code js/nest-app/back/src/auth/dto&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\code js\\nest-app\\front\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="npm.db:dev:restart">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\code js\nest-app\back\src\auth\dto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.prisma:dev:deploy">
     <configuration name="db:dev:restart" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/back/package.json" />
       <command value="run" />
@@ -111,9 +121,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.prisma:dev:deploy" />
         <item itemvalue="npm.db:dev:restart" />
         <item itemvalue="npm.start:dev" />
-        <item itemvalue="npm.prisma:dev:deploy" />
         <item itemvalue="npm.db:dev:up" />
         <item itemvalue="npm.db:dev:rm" />
       </list>
@@ -147,6 +157,11 @@
       <workItem from="1667771544161" duration="613000" />
       <workItem from="1667807336427" duration="7393000" />
       <workItem from="1667847092147" duration="598000" />
+      <workItem from="1667860416227" duration="3982000" />
+      <workItem from="1667865608923" duration="375000" />
+      <workItem from="1667865997161" duration="718000" />
+      <workItem from="1667866731474" duration="2880000" />
+      <workItem from="1667895930574" duration="2459000" />
     </task>
     <task id="LOCAL-00001" summary="verif">
       <created>1664286023191</created>
@@ -162,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667645749852</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="token validation account">
+      <created>1667860443644</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667860443644</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +205,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="verif" />
     <MESSAGE value="mailer done" />
-    <option name="LAST_COMMIT_MESSAGE" value="mailer done" />
+    <MESSAGE value="token validation account" />
+    <MESSAGE value="token validation account service and error check done" />
+    <option name="LAST_COMMIT_MESSAGE" value="token validation account service and error check done" />
   </component>
 </project>

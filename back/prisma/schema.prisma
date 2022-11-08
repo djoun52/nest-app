@@ -27,8 +27,8 @@ model User {
 model emailVerificationToken {
     id          Int         @id @default(autoincrement())
     user        User        @relation(fields: [userId], references: [id])
-    userId      Int
-    token       String
+    userId      Int         @unique
+    token       Int
     createdAt   DateTime    @default(now())
 }
 
@@ -36,7 +36,7 @@ model passwordResetToken {
     id          Int         @id @default(autoincrement())
     user        User        @relation(fields: [userId], references: [id])
     userId      Int
-    token       String?     @expire(3600)
+    token       String?
     createdAt   DateTime    @default(now())
 }
 

@@ -1,6 +1,6 @@
 import { ForbiddenException, Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
-import { AuthDto, LoginDto } from './dto';
+import { AuthDto, LoginDto, TokenDto } from './dto';
 import bcrypt from 'bcrypt';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 import { JwtService } from '@nestjs/jwt';
@@ -17,7 +17,7 @@ export class AuthService {
     private mailService: MailService,
   ) {}
 
-  async signup(dto: AuthDto) {
+  async signUp(dto: AuthDto) {
     if (dto.password.length < 8 || dto.password.length > 35) {
       throw new ForbiddenException(
         'le mots de passe doit contenire entre 8 et 20 caractère ',
@@ -34,6 +34,13 @@ export class AuthService {
           password,
         },
       });
+      const validToken = await this.prisma.emailVerificationToken.create({
+        data: {
+          userId: user.id,
+          token: mailToken,
+        },
+      });
+      console.log(validToken);
       const tokens = await this.signToken(user.id, user.email);
       await this.updateRtHash(user.id, tokens.refresh_token);
       await this.mailService.sendUserConfirmation(user, mailToken);
@@ -48,7 +55,7 @@ export class AuthService {
     }
   }
 
-  async signin(dto: LoginDto) {
+  async signIn(dto: LoginDto) {
     const user = await this.prisma.user.findUnique({
       where: {
         email: dto.email,
@@ -106,6 +113,46 @@ export class AuthService {
       },
       data: {
         hashedRt: hash,
+      },
+    });
+  }
+
+  async verifTokenAccount(dto: TokenDto): Promise<void> {
+    const token = await this.prisma.emailVerificationToken.findUnique({
+      where: {
+        userId: dto.id,
+      },
+    });
+    if (!token) {
+      throw new ForbiddenException("user don't have token");
+    }
+    if (token.token != dto.token) {
+      throw new ForbiddenException('wrong token');
+    }
+    console.log(dto.id);
+    console.log(token);
+    const tokenDuration = Date.now() - Date.parse(token.createdAt.toString());
+    console.log(tokenDuration);
+    if (tokenDuration > 3600000) {
+      await this.prisma.emailVerificationToken.delete({
+        where: {
+          id: token.id,
+        },
+      });
+      throw new ForbiddenException('token expire');
+    }
+    await this.prisma.emailVerificationToken.delete({
+      where: {
+        id: token.id,
+      },
+    });
+
+    await this.prisma.user.update({
+      where: {
+        id: dto.id,
+      },
+      data: {
+        is_verifed: true,
       },
     });
   }
