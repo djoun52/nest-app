@@ -63,4 +63,11 @@ export class AuthController {
   verifTokenAccount(@Body() dto: TokenDto) {
     return this.authService.verifTokenAccount(dto);
   }
+
+  @Public()
+  @HttpCode(HttpStatus.OK)
+  @Post('sendEmailVerifAccount')
+  SendEmailVerifyAccount(@GetCurrentUserId() userId: number) {
+    return this.authService.reSendEmailVerifyAccount(userId);
+  }
 }
