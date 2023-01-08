@@ -8,5 +8,5 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 125
-      POSTGRES_DB: beneto
+      POSTGRES_DB: api0
 

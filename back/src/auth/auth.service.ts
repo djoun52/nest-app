@@ -63,6 +63,10 @@ export class AuthService {
     if (!user) {
       throw new ForbiddenException("User doesn't exist");
     }
+
+    if (user.hashedRt !== null) {
+      throw new ForbiddenException('User already connected');
+    }
     const isMatched = bcrypt.compareSync(dto.password, user.password);
     if (!isMatched) {
       throw new ForbiddenException('wrong password');
@@ -159,6 +163,16 @@ export class AuthService {
 
   async verifTokenAccount(dto: TokenDto): Promise<void> {
     //find the user in the DB
+    const user = await this.prisma.user.findUnique({
+      where: {
+        id: dto.id,
+      },
+    });
+    if (!user) {
+      throw new ForbiddenException("user don't exist");
+    }
+
+    //find the token in the DB
     const token = await this.prisma.emailVerificationToken.findUnique({
       where: { userId: dto.id },
     });
