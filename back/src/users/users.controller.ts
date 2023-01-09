@@ -21,18 +21,16 @@ export class UsersController {
   }
 
   @Public()
-  @Post('forgetPassword')
+  @Post('forgetPasswordAsk')
   @HttpCode(HttpStatus.OK)
   forgetPassword(@Body() dto: forgetPassAsk) {
-    return this.usersService.forgetPassword(dto);
+    return this.usersService.forgetPasswordAsk(dto);
   }
 
   @Public()
   @Post('forgetPasswordChange')
   @HttpCode(HttpStatus.OK)
   forgetPasswordChange(@Body() dto: forgetPassChange) {
-    if (this.usersService.isValidPassResetToken(dto)) {
-      // this.usersService.changePassword(dto);
-    }
+    return this.usersService.forgetPasswordChange(dto);
   }
 }

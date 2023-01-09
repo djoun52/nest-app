@@ -5,33 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10692309-bec8-456f-8973-35f402c9ecff" name="Changes" comment="forget password ask is done">
-      <change afterPath="$PROJECT_DIR$/back/src/mail/templates/ResetPasswordLink.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/user/user.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/user/user.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/user/user.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/users/dto/forgetPassAsk.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/users/dto/forgetPassChange.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/users/dto/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/users/entities/user.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/users/users.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/users/users.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/users/users.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/users/users.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/back/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/back/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/auth.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.service.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/decorator/get-current-user-id.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/decorator/get-current-user-id-rt.decorator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/decorator/get-current-user-lg.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/decorator/get-current-user-id-at.decorator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/decorator/get-current-user.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/decorator/get-current-user.decorator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/decorator/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/decorator/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/decorator/public.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/decorator/public.decorator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/strategys/at.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/strategys/at.strategy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/mail/mail.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/mail/mail.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/strategys/rt.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/strategys/rt.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/testcrud/dto/create-testcrud.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/testcrud/dto/update-testcrud.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/testcrud/entities/testcrud.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/testcrud/testcrud.controller.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/testcrud/testcrud.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/testcrud/testcrud.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/testcrud/testcrud.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/testcrud/testcrud.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/user/user.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/user/user.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/user/user.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/users/users.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/users/users.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +185,9 @@
       <workItem from="1673042454021" duration="1708000" />
       <workItem from="1673044210058" duration="2353000" />
       <workItem from="1673086623178" duration="9910000" />
-      <workItem from="1673144146214" duration="2872000" />
+      <workItem from="1673144146214" duration="4200000" />
+      <workItem from="1673176531124" duration="3919000" />
+      <workItem from="1673274939110" duration="5632000" />
     </task>
     <task id="LOCAL-00001" summary="verif">
       <created>1664286023191</created>
@@ -231,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672871324815</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="forget password ask is done">
+      <created>1673147337983</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673147337983</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
