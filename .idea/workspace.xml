@@ -4,25 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10692309-bec8-456f-8973-35f402c9ecff" name="Changes" comment="forget password ask is done">
+    <list default="true" id="10692309-bec8-456f-8973-35f402c9ecff" name="Changes" comment="forget password change is done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/auth.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/auth/strategys/rt.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/auth/strategys/rt.strategy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/testcrud/dto/create-testcrud.dto.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/testcrud/dto/update-testcrud.dto.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/testcrud/entities/testcrud.entity.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/testcrud/testcrud.controller.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/testcrud/testcrud.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/testcrud/testcrud.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/testcrud/testcrud.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/testcrud/testcrud.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/user/user.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/user/user.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/user/user.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/guards/at.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/common/guards/at.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/guards/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/common/guards/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/auth/guards/rt.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/common/guards/rt.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/decorator/get-current-user-id-at.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/common/decorator/get-current-user-id-at.decorator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/decorator/get-current-user-id-rt.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/common/decorator/get-current-user-id-rt.decorator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/decorator/get-current-user.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/common/decorator/get-current-user.decorator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/decorator/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/common/decorator/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/decorator/public.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/common/decorator/public.decorator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/users/users.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/users/users.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +26,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/back/src/auth/auth.controller.ts" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,7 +60,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\code js\\nest-app\\back\\node_modules\\prettier&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\code js\\nest-app\\back\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -73,6 +71,7 @@
       <recent name="C:\code js\nest-app\back\src\auth\dto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\code js\nest-app\back\src\common" />
       <recent name="C:\code js\nest-app\back\src" />
     </key>
   </component>
@@ -133,10 +132,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start:dev" />
-        <item itemvalue="npm.db:dev:restart" />
-        <item itemvalue="Docker.back.dev-db: Compose Deployment" />
         <item itemvalue="npm.prisma:dev:deploy" />
         <item itemvalue="npm.db:dev:up" />
+        <item itemvalue="npm.db:dev:restart" />
+        <item itemvalue="Docker.back.dev-db: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +186,12 @@
       <workItem from="1673086623178" duration="9910000" />
       <workItem from="1673144146214" duration="4200000" />
       <workItem from="1673176531124" duration="3919000" />
-      <workItem from="1673274939110" duration="5632000" />
+      <workItem from="1673274939110" duration="7325000" />
+      <workItem from="1673343867133" duration="1804000" />
+      <workItem from="1673356338823" duration="3571000" />
+      <workItem from="1673371295181" duration="586000" />
+      <workItem from="1673395327669" duration="1174000" />
+      <workItem from="1673397988493" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="verif">
       <created>1664286023191</created>
@@ -231,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673147337983</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="forget password change is done">
+      <created>1673303744518</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673303744518</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +267,7 @@
     <MESSAGE value="token validation account service and error check done" />
     <MESSAGE value="token validation account service resend email" />
     <MESSAGE value="forget password ask is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="forget password ask is done" />
+    <MESSAGE value="forget password change is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="forget password change is done" />
   </component>
 </project>

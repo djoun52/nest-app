@@ -7,7 +7,7 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { GetCurrentUserIdAt, Public } from '../decorator';
+import { GetCurrentUserIdAt, Public } from '../common/decorator';
 import { forgetPassAsk, forgetPassChange } from './dto';
 
 @Controller('user')

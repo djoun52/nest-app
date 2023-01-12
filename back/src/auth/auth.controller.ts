@@ -15,9 +15,9 @@ import {
   GetCurrentUserIdRt,
   GetCurrentUser,
   GetCurrentUserIdAt,
-} from '../decorator';
+} from '../common/decorator';
 import { Tokens } from './types';
-import { RtGuard } from './guards';
+import { RtGuard } from '../common/guards';
 
 @Controller('auth')
 export class AuthController {
